@@ -10,6 +10,9 @@ func main() {
 	fixedSizeofFiveNumbers()
 	checkAnArray()
 	inputExample()
+	sumAndAverageOfArray()
+	arrayTropicalPlaces()
+	address()
  
 }
 
@@ -121,5 +124,59 @@ func inputExample() {
 
  fmt.Printf("Total cost before tax: $%.2f\n", totalCostBeforeTax)
  fmt.Printf("Total cost after tax: $%.2f\n", totalCostAfterTax)
+ fmt.Printf("/////////////////////////////////////////\n\n")
 
+}
+
+
+func sumAndAverageOfArray() {
+    // Fixed-size array
+    numbers := [5]int{34, 47, 58, 72, 85}
+
+    // Initialize sum to 0
+    sum := 0
+
+    // Iterate through the array and accumulate the sum
+    for _, num := range numbers {
+        sum += num
+    }
+
+    // Calculate the average
+    average := float64(sum) / float64(len(numbers))
+
+    // Print the result
+    fmt.Printf("Sum: %d\n", sum)
+    fmt.Printf("Average: %.2f\n", average)
+		fmt.Printf("/////////////////////////////////////////\n\n")
+}
+
+
+func arrayTropicalPlaces(){
+	places := [5]string{"Brazil", "Bora Bora", "Maldives", "Bali", "Bahamas"}
+
+	// Display and count the elements of the array
+	for index, word := range places {
+		fmt.Printf("Element at index %d: %s\n", index, word)
+}
+
+// Count the number of elements in the array
+count := len(places)
+fmt.Printf("\nNumber of elements in the array: %d\n", count)
+fmt.Printf("/////////////////////////////////////////\n\n")
+
+}
+
+
+func address() {
+    var quantityVanilla int
+
+    // Prompt the user to enter a value for quantityVanilla
+    fmt.Print("Enter the quantity of vanilla: ")
+
+    // Use fmt.Scanln to read the user input and store it in the variable quantityVanilla
+    fmt.Scanln(&quantityVanilla)
+
+    // Display the value of quantityVanilla
+    fmt.Println("You entered:", quantityVanilla)
+    fmt.Println("You entered:", &quantityVanilla)
 }
